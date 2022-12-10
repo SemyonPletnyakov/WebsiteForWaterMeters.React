@@ -35,6 +35,12 @@ const CheckResult = ({checkHash}) => {
             <tr><td style={{textAlign:'left'}}>Лицевой счёт</td><td style={{textAlign:'right'}}>{check.ls}</td></tr>
             <tr><td style={{textAlign:'left'}}>Название услуги</td><td style={{textAlign:'right'}}>{check.uslugaName}</td></tr>
             <tr><td style={{textAlign:'left'}}>Цена</td><td style={{textAlign:'right'}}>{check.price}</td></tr>
+            <tr><td style={{textAlign:'left'}}>Статус оплаты</td>
+                    {check.paymentStatus
+                    ?<td style={{textAlign:'right'}}>ОПЛАЧЕНО</td>
+                    :<td style={{textAlign:'right'}}><b>НЕ ОПЛАЧЕНО</b></td>
+                    }
+            </tr>
             <tr><td colspan="2" style={{textAlign:'center'}}><QRCodeSVG value={ActualDomenServera.domenClient+"check/"+check.id} /></td></tr>
         </table>
     );
