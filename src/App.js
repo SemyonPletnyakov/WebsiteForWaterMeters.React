@@ -11,6 +11,7 @@ import {QRCodeSVG} from 'qrcode.react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import CheckPage from './pages/CheckPage';
+//тест коммент
 function App() {
 
   return (
