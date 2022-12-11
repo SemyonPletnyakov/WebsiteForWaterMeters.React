@@ -20,6 +20,7 @@ const CheckForm = ({person, result}) => {
         console.log(URL)
         const response = await axios.get(URL)
         console.log(response.data)
+        setPayLink("")
         setPayLink(response.data)
         if(response.data!=='paid'&&response.data){
             window.open(response.data, '_blank', 'noopener,noreferrer');
